@@ -76,6 +76,28 @@ brew upgrade
 ### iTerm2 + oh-my-zsh
 比较好的教程，这里不做赘述：https://zhuanlan.zhihu.com/p/290737828
 
+- 配置agnoster主题后如何隐藏目录
+
+```bash
+vim ~/.oh-my-zsh/themes/agnoster.zsh-theme
+```
+找到`prompt_dir`函数
+
+old:
+```zsh
+prompt_dir() {
+  prompt_segment blue $CURRENT_FG '%~'
+}
+```
+
+new:
+```zsh
+prompt_dir() {
+  prompt_segment blue $CURRENT_FG '%c'
+}
+```
+
+
 ### 安装node相关
 
 - 安装多环境node管理工具`n`
