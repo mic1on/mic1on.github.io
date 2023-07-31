@@ -97,3 +97,17 @@ n i 20.5.0
 ```bash
 npm i pnpm -g
 ```
+
+### vscode
+
+#### 平滑移动
+
+```bash
+# For VSCode
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+# For VSCode Insiders
+defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+```
+
+修改 `系统偏好设置` > `键盘` 更改 `按键重复` 与 `重复前延迟`
