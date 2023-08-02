@@ -15,6 +15,22 @@ isOriginal: true
 
 ### 配置SSH
 
+### 配置pip国内源
+
+```bash
+cd ~
+mkdir .pip
+cd .pip
+vim pip.conf
+```
+
+```ini
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+[install]
+trusted-host=pypi.tuna.tsinghua.edu.cn
+```
+
 > 检查是否存在ssh key
 
 ```bash
@@ -46,6 +62,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 ```bash
 ssh -T git@github.com
 ```
+
 
 ## 开发软件
 
