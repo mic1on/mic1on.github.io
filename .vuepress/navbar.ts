@@ -93,6 +93,20 @@ export default navbar([
     ]
   },
   {
+    text: "开源项目",
+    icon: "github",
+    children: [
+      {
+        text: "usepy",
+        link: "https://usepy.code05.com/"
+      },
+      {
+        text: "onestep",
+        link: "https://onestep.code05.com/"
+      },
+    ]
+  },
+  {
     text: "编程参考",
     link: "https://reference.52caiji.com/",
     icon: "code"
