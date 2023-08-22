@@ -1,6 +1,8 @@
-import { navbar } from "vuepress-theme-hope";
+import { navbar, type HopeThemeNavbarItem } from "vuepress-theme-hope";
+import fs from "fs";
+import path from "path";
 
-export default navbar([
+const navbarList = navbar([
   {
     text: "首页",
     link: "/",
@@ -56,11 +58,6 @@ export default navbar([
     prefix: "/posts/other/",
     children: [
       {
-        text: "逆向",
-        icon: "recall",
-        link: "reverse/"
-      },
-      {
         text: "git",
         icon: "git",
         link: "git/"
@@ -112,3 +109,29 @@ export default navbar([
     icon: "code"
   }
 ]);
+
+const isDev = process.env.NODE_ENV === "development";
+
+if (isDev) {
+  const tempPath = path.resolve(__dirname, "../posts/_temp");
+  const tempFiles = fs.readdirSync(tempPath);
+  const children: HopeThemeNavbarItem[] = [];
+  tempFiles.forEach((file: string) => {
+    const name = file.replace(".md", "");
+    children.push({
+      text: name,
+      icon: "git",
+      link: name
+    });
+  })
+  navbarList.push(
+    {
+      text: "未发布博文",
+      icon: "other",
+      prefix: "/posts/_temp/",
+      children
+    }
+  )
+}
+
+export default navbarList;
