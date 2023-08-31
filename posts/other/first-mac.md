@@ -13,8 +13,6 @@ isOriginal: true
 
 ## 开发环境
 
-### 配置SSH
-
 ### 配置pip国内源
 
 ```bash
@@ -30,6 +28,8 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 [install]
 trusted-host=pypi.tuna.tsinghua.edu.cn
 ```
+
+### 配置SSH
 
 > 检查是否存在ssh key
 
@@ -114,6 +114,17 @@ prompt_dir() {
 }
 ```
 
+- alias
+
+```ssh
+alias goproxy='export HTTP_PROXY=http://127.0.0.1:7890; export HTTPS_PROXY=http://127.0.0.1:7890; export ALL_PROXY=socks5://127.0.0.1:7891; git config --global http.proxy http://127.0.0.1:7890; git config --global https.proxy http://127.0.0.1:7890'
+
+alias disproxy='unset http_proxy https_proxy; git config --global --unset http.proxy; git config --global --unset https.proxy'
+
+alias gc='git clone'
+alias pi='poetry install'
+```
+
 
 ### 安装node相关
 
@@ -150,3 +161,14 @@ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
 ```
 
 修改 `系统偏好设置` > `键盘` 更改 `按键重复` 与 `重复前延迟`
+
+
+## 常用软件
+
+### Alfred
+
+Mac的效率神器
+
+### SnippetsLab
+
+### Termius
