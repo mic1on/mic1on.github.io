@@ -88,6 +88,10 @@ async function onResponse(context, url, request, response) {
 
 更多的脚本可以参考[proxyman官方文档](https://docs.proxyman.io/scripting/script)。
 
+这时候我只需在我的小程序后端新增这个接口，将token保存下来即可。
+
+![](https://miclon-job.oss-cn-hangzhou.aliyuncs.com/img/20230904155151.png)
+
 ## 总结
 
 本文提供了一个解决微信小程序远程打印问题的详细方案，包括抓包和相对自动化实现，使得我能够在任何地方便捷地进行打印操作。如果有更好的方案欢迎留言讨论。
