@@ -14,6 +14,8 @@ tag:
 - settings
 - nacos
 - dynaconf
+sticky: true
+star: true
 isOriginal: true
 ---
 
