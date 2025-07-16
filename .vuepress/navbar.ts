@@ -105,6 +105,10 @@ const navbarList = navbar([
         text: "nacos",
         link: "https://nacos.code05.com/"
       },
+      {
+        text: "notify",
+        link: "https://notify.code05.com/"
+      },
     ]
   },
   {
