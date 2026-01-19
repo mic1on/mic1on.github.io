@@ -134,24 +134,26 @@ const isDev = process.env.NODE_ENV === "development";
 
 if (isDev) {
   const tempPath = path.resolve(__dirname, "../posts/_temp");
-  const tempFiles = fs.readdirSync(tempPath);
-  const children: HopeThemeNavbarItem[] = [];
-  tempFiles.forEach((file: string) => {
-    const name = file.replace(".md", "");
-    children.push({
-      text: name,
-      icon: "git",
-      link: name
+  if (fs.existsSync(tempPath)) {
+    const tempFiles = fs.readdirSync(tempPath);
+    const children: HopeThemeNavbarItem[] = [];
+    tempFiles.forEach((file: string) => {
+      const name = file.replace(".md", "");
+      children.push({
+        text: name,
+        icon: "git",
+        link: name
+      });
     });
-  })
-  navbarList.push(
-    {
-      text: "未发布博文",
-      icon: "other",
-      prefix: "/posts/_temp/",
-      children
-    }
-  )
+    navbarList.push(
+      {
+        text: "未发布博文",
+        icon: "other",
+        prefix: "/posts/_temp/",
+        children
+      }
+    );
+  }
 }
 
 export default navbarList;

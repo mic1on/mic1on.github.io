@@ -3,6 +3,7 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/posts/language/python/": "structure",
   "/posts/language/vue/": "structure",
+  "/posts/ai/coding/": "structure",
   "/posts/framework/scrapy/": "structure",
   "/posts/framework/django/": "structure",
   "/posts/framework/apscheduler/": "structure",

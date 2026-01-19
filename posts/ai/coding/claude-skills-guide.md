@@ -506,7 +506,7 @@ description: 确保所有 Git 提交消息符合团队规范
 
 每个提交消息必须遵循以下格式：
 
-```
+```text
 <type>(<scope>): <subject>
 
 <body>
