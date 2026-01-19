@@ -9,6 +9,18 @@ const navbarList = navbar([
     icon: "home"
   },
   {
+    text: "AI",
+    icon: "ai",
+    prefix: "/posts/ai/",
+    children: [
+      {
+        text: "AI Coding",
+        icon: "openai",
+        link: "coding/"
+      }
+    ],
+  },
+  {
     text: "语言",
     icon: "code",
     prefix: "/posts/language/",
